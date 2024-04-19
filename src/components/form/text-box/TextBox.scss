@@ -1,0 +1,100 @@
+/// import global scss here instead of import this local scss to global scss folder
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+// diimport dari scss/themes/components
+.C--textbox.type--1 {
+  display: block;
+  padding: 0 16px;
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: #fff;
+  outline: 0;
+  box-shadow: none;
+  @include border;
+  @include border-radius($border-radius);
+
+  &:focus {
+    border-color: $border-color-focus;
+  }
+
+  &:disabled {
+    color: #999999;
+    background-color: #D6D6D6;
+    border-color: "#D6D6D6";
+  }
+
+  &.invalid {
+    border-color: var(--danger);
+
+    &:hover {
+      border-color: $border-color-focus !important;
+    }
+
+    &:focus {
+      border-color: $border-color-focus !important;
+    }
+  }
+}
+
+.C--textbox.type--2 {
+  padding: 0 13px;
+  width: auto;
+  height: 38px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: #fff;
+  outline: 0;
+  box-shadow: none;
+  @include border;
+  @include border-radius($border-radius);
+
+  &:focus {
+    border-color: $border-color-focus;
+  }
+
+  &:disabled {
+    color: #999999;
+    background: #f2f2f2;
+    border-color: "#D6D6D6";
+  }
+
+  &.invalid {
+    border-color: var(--danger);
+
+    &:hover {
+      border-color: $border-color-focus !important;
+    }
+
+    &:focus {
+      border-color: $border-color-focus !important;
+    }
+  }
+}
+
+.textbook-spinner {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.textbox-title {
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.textbox-invalid-message {
+  position: absolute;
+  color: var(--danger);
+  font-size: 10px;
+  bottom: -1.5rem;
+  left: 0;
+}
+
+.invalid-message {
+  position: absolute;
+  color: var(--danger);
+  font-size: 10px;
+}

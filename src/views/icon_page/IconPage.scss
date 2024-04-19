@@ -1,0 +1,92 @@
+.buttonSection {
+    background-color: #0097da;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    cursor: pointer;
+    width: 432px;
+    border-radius: 25px;
+    justify-content: center;
+    height: 45px;
+}
+
+.buttonSection:hover {
+    background-color: rgb(1, 71, 105);
+    color: white;
+}
+
+.buttonSection:hover .btn {
+    color: white;
+}
+
+.codeFunction img {
+    width: 25px;
+    height: 25px;
+}
+
+.codeFunction {
+    border: 1px solid rgba(59, 74, 89, 0.2);
+}
+
+.icon-copy {
+    fill: rgb(174, 186, 203);
+}
+
+.ex-code {
+    color: rgb(174, 186, 203);
+    border-radius: 10px;
+}
+
+.icon-card {
+    min-height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icn-search-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.C--textbox.type--1.text-search {
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    &:focus {
+        border-color: rgba(0, 0, 0, 0.1),
+    }
+}
+
+.search-recipient-wrapper {
+    height: 38px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon-result {
+    display: inline-flex;
+    flex-direction: column;
+
+    .text-icon-result {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .svg-icon-result {
+        border: 1px solid transparent;
+        font-size: 2rem;
+        color: black;
+        margin: 4px 0px;
+        fill: black;
+    }
+}

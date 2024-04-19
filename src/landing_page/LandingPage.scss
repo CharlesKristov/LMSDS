@@ -1,0 +1,47 @@
+.heroesContent {
+    padding: 50px;
+    background: linear-gradient(135deg, #9fd1ff 0%, #ffffff 100%);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.WelcomePageTitle {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.WelcomePageDesc {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.WelcomePageButton {
+    margin-top: 20px;
+}
+
+/* Custom Button Styling */
+.Button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Button.theme-binus-blue {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.Button.theme-binus-blue:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

@@ -1,0 +1,136 @@
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+$end: 100;
+$units: px, rem, \%;
+
+@each $unit in $units {
+  $cunit: str-replace($unit, "\\", "");
+
+  // positive value
+  @for $i from 0 through $end {
+    // font-size
+    .font-size-#{$i}#{$unit} {
+      font-size: #{$i}#{$cunit} !important;
+    }
+
+    // margin
+    .m-#{$i}#{$unit} {
+      margin: #{$i}#{$cunit} !important;
+    }
+
+    .mt-#{$i}#{$unit},
+    .my-#{$i}#{$unit} {
+      margin-top: #{$i}#{$cunit} !important;
+    }
+
+    .mr-#{$i}#{$unit},
+    .mx-#{$i}#{$unit} {
+      margin-right: #{$i}#{$cunit} !important;
+    }
+
+    .mb-#{$i}#{$unit},
+    .my-#{$i}#{$unit} {
+      margin-bottom: #{$i}#{$cunit} !important;
+    }
+
+    .ml-#{$i}#{$unit},
+    .mx-#{$i}#{$unit} {
+      margin-left: #{$i}#{$cunit} !important;
+    }
+    // margin end
+
+    // padding
+    .p-#{$i}#{$unit} {
+      padding: #{$i}#{$cunit} !important;
+    }
+
+    .pt-#{$i}#{$unit},
+    .py-#{$i}#{$unit} {
+      padding-top: #{$i}#{$cunit} !important;
+    }
+
+    .pr-#{$i}#{$unit},
+    .px-#{$i}#{$unit} {
+      padding-right: #{$i}#{$cunit} !important;
+    }
+
+    .pb-#{$i}#{$unit},
+    .py-#{$i}#{$unit} {
+      padding-bottom: #{$i}#{$cunit} !important;
+    }
+
+    .pl-#{$i}#{$unit},
+    .px-#{$i}#{$unit} {
+      padding-left: #{$i}#{$cunit} !important;
+    }
+    // padding end
+
+    // gap
+    .gap-#{$i}#{$unit} {
+      gap: #{$i}#{$cunit};
+    }
+
+    // column gap
+    .col-gap-#{$i}#{$unit} {
+      column-gap: #{$i}#{$cunit};
+    }
+
+    // row gap
+    .row-gap-#{$i}#{$unit} {
+      row-gap: #{$i}#{$cunit};
+    }
+
+    // border-radius
+    .br-#{$i}#{$unit} {
+      border-radius: #{$i}#{$cunit};
+    }
+  }
+
+  // negative value
+  @for $i from 1 through $end {
+    // margin
+    .-m-#{$i}#{$unit} {
+      margin: -#{$i}#{$cunit} !important;
+    }
+
+    .-mt-#{$i}#{$unit},
+    .-my-#{$i}#{$unit} {
+      margin-top: -#{$i}#{$cunit} !important;
+    }
+
+    .-mr-#{$i}#{$unit},
+    .-mx-#{$i}#{$unit} {
+      margin-right: -#{$i}#{$cunit} !important;
+    }
+
+    .-mb-#{$i}#{$unit},
+    .-my-#{$i}#{$unit} {
+      margin-bottom: -#{$i}#{$cunit} !important;
+    }
+
+    .-ml-#{$i}#{$unit},
+    .-mx-#{$i}#{$unit} {
+      margin-left: -#{$i}#{$cunit} !important;
+    }
+    // margin end
+  }
+}

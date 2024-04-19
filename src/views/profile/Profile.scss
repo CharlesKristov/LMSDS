@@ -1,0 +1,45 @@
+.dropdown-avatar {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    .user-picture {
+        width: 64px;
+        min-width: 64px;
+        height: 64px;
+        min-height: 64px;
+    }
+
+    .user-info {
+        margin-top: 5px;
+        margin-left: 16px;
+
+        &-name {
+            font-weight: bolder;
+            font-size: 14px;
+            word-break: normal;
+            white-space: normal;
+        }
+
+        &-code {
+            font-size: 12px;
+        }
+    }
+}
+
+.menu-profile {
+    top: 6px !important;
+    width: 341px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    box-shadow: 0px 0px 5px #33333333 !important;
+}
+
+.logout {
+    padding: 16px;
+    border-top: 1px solid #c8ced3;
+}
+
+.dropdown-item:active {
+    background-color: #20a8d8 !important;
+}
